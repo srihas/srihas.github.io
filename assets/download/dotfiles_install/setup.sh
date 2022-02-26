@@ -181,6 +181,11 @@ verify_os() {
         printf "Sorry, this script is intended only for Ubuntu,SLES!"
     fi
 
+    ask_for_confirmation "Still want to proceed?"
+    if answer_is_yes; then
+        return 0;
+    fi
+
     return 1
 
 }
