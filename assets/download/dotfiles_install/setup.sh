@@ -175,9 +175,10 @@ verify_os() {
         fi
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
+    elif [ "$os_name" == "sles" ];then
+	return 0
     else
-        printf "Sorry, this script is intended only for Ubuntu!"
+        printf "Sorry, this script is intended only for Ubuntu,SLES!"
     fi
 
     return 1
